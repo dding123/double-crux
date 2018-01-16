@@ -2,7 +2,7 @@
 
 [Hosted on AppSpot here.](http://double-crux.appspot.com/)
 
-Double Crux was a final project for [Google CSSI 2017](https://edu.google.com/resources/programs/computer-science-summer-institute/).
+Double Crux was a final project for [Google CSSI 2017](https://edu.google.com/resources/programs/computer-science-summer-institute/). Created by myself, Owen Shen (Owenshen24), and Vanessa Thompson (Vanzcoder).
 
 The stylings are based off the [Skeleton boilerplate](https://github.com/dhg/Skeleton#colophon).
 
