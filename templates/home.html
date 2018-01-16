@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/skeleton.css"/>
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/styleshome.css"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/manifest.json">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>Double Crux</title>
+  </head>
+
+<link type="text/css" rel="stylesheet" href="/stylesheets/styleshome.css"/>
+  <body>
+    <section align="right">
+        {% if current_user %}
+          Welcome, {{current_user}} <span style="display:inline-block; width: 10px;"></span>
+          <a href="{{logout_url}}"><button>Log Out</button></a>
+        {% else %}
+          Not Logged In <span style="display:inline-block; width: 10px;"></span>
+          <a href="{{login_url}}"><button>Log In</button></a>
+        {% endif %}
+      </section>
+
+    <br />
+    <hr />
+    <span style="display:block; height: 10px;"></span>
+
+    <div class="left-pad">
+
+      <div class="logotitle">
+        <h1>Double Crux</h1>
+      </div>
+
+      <ul class="navbar">
+        <li><a class="linkcolor" href="/ourteam"/>Our Team</a></li>
+        <li><a class="linkcolor" href="/profile"/>Profile</a></li>
+        <li><a class="linkcolor" href="/featured"/>Featured</a></li>
+      </ul>
+
+      <br />
+  <br />
+
+
+        <div class="wrapper">
+            {% if current_user %}
+                <a href="/creatediscussion"><button class="button-primary">Add Discussion</button> </a></p>
+            {% endif %}
+       </div>
+        <br>
+
+  <h5 class="FeaturedDiscussions">Featured Discussions:</h5>
+  <br />
+        {% for item in discussions %}
+          <a href="/discussion?key={{item.key.urlsafe()}}"><button>{{item.title}}</button></a>
+          <br />
+          <br />
+        {% endfor %}
+
+        <br />
+
+      </div>
+
+    </body>
+
+  </html>
